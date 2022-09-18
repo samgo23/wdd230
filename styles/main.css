@@ -1,0 +1,43 @@
+body {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+header, nav, main, footer {
+    margin: 1.5rem auto;
+    max-width: 760px;
+}
+
+img {
+    box-shadow: 2px 2px 5px black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.5rem;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    box-shadow: 5px 5px 5px grey;
+    
+}
+
+.grid_img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+}
+
+.grid_text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
