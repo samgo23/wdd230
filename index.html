@@ -6,33 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Gordon WDD 230</title>
     <meta name="discription" content="Sam Gordon WDD 230 assignment portal">
+    <link href="styles/main.css" rel="stylesheet">
 </head>
    
 <body>
-    <header>
-        <h1>Sam Gordon</h1>
+    <header class="grid">
+        <img class="grid_img" src="images/myportait.jpg" alt="Picture of Sam">
+        <h1 class="grid_text">Sam Gordon</h1>
     </header>
-    <nav>
+    <nav >
+        <h2>WDD 230: Assignment Portal</h2>
         <ul>
             <li>Lesson 2: <a href="#">Title</a></li>
-            <li>Lesson 3: Title</li>
-            <li>Lesson 4: Title</li>
-            <li>Lesson 5: Title</li>
-            <li>Lesson 6: Title</li>
-            <li>Lesson 7: Title</li>
-            <li>Lesson 8: Title</li>
-            <li>Lesson 9: Title</li>
-            <li>Lesson 10: Title</li>
-            <li>Lesson 11: Title</li>
+            <li>Lesson 3: <a href="#">Title</a></li>
+            <li>Lesson 4: <a href="#">Title</a></li>
+            <li>Lesson 5: <a href="#">Title</a></li>
+            <li>Lesson 6: <a href="#">Title</a></li>
+            <li>Lesson 7: <a href="#">Title</a></li>
+            <li>Lesson 8: <a href="#">Title</a></li>
+            <li>Lesson 9: <a href="#">Title</a></li>
+            <li>Lesson 10: <a href="#">Title</a></li>
+            <li>Lesson 11: <a href="#">Title</a></li>
         </ul>
     </nav>
     <main>
-        <h2>WDD 230: Assignment Portal</h2>
+        <p>
+            Some lessons may need more than one activity/assignment link.
+        </p>
     </main>
     
     
     <footer>
+        <p>
+            &copy; 2022 | Sam Gordon | Utah | <span id="date1"></span>
+        </p>
+        <p><script>alert(document.lastModified);
 
+            let oLastModif = new Date(document.lastModified);
+            
+            let nLastModif = Date.parse(document.lastModified);
+            
+            const lastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/, "$1"));
+            const lastModif = Date.parse(document.lastModified);
+            
+            if (isNaN(lastVisit) || lastModif > lastVisit) {
+            document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
+            
+            if (isFinite(lastVisit)) {
+                alert("This page has been changed!");
+            }
+            }</script></span></p>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
