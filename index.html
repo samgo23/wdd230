@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Gordon WDD 230</title>
     <meta name="discription" content="Sam Gordon WDD 230 assignment portal">
-    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/small.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 </head>
    
 <body>
@@ -38,24 +42,9 @@
     
     <footer>
         <p>
-            &copy; 2022 | Sam Gordon | Utah | <span id="date1"></span>
+            &copy;<span id="year"></span> | Sam Gordon | Utah | <p>This document was last modified <span id="modify"></span>.</p>
         </p>
-        <p><script>alert(document.lastModified);
-
-            let oLastModif = new Date(document.lastModified);
-            
-            let nLastModif = Date.parse(document.lastModified);
-            
-            const lastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*=\s*([^;]*).*$)|^.*$/, "$1"));
-            const lastModif = Date.parse(document.lastModified);
-            
-            if (isNaN(lastVisit) || lastModif > lastVisit) {
-            document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${location.pathname}`;
-            
-            if (isFinite(lastVisit)) {
-                alert("This page has been changed!");
-            }
-            }</script></p>
+        <p id="update">Last Updated:</p>
     </footer>
     <script src="scripts/script.js"></script>
 </body>
