@@ -1,0 +1,40 @@
+/*35rem is also 560px when basefont is 16px */
+@media only screen and (min-width: 64rem) {
+    nav ul li a { 
+        padding: .5rem 1rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    #hero {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    #news {
+        grid-column: 2/-3;
+        grid-row: 3/4;
+    }
+    #spotlight3 {display: block;}
+    #spotlights {
+        grid-column: 3/4;
+        grid-row: 1/-1;
+        display: flex;
+        flex-direction: column;
+
+    }
+    #events {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #weather {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #join {
+        grid-column: 1/2;
+        grid-row: 3/4;
+
+    }
+    }/* End Medium */
