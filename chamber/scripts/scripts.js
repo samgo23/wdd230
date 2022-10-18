@@ -23,7 +23,7 @@ document.querySelector('#year').innerHTML = year;
 Time = document.lastModified;
 document.querySelector("#modify").innerHTML = document.lastModified;
 
-const meetingDay = new Date();
+//const meetingDay = new Date();
 const monTues = dateTime.getDate();
 
 function isMonTues(day) {
