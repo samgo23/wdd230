@@ -1,4 +1,4 @@
-/* 35rem is also 560px when basefont is 16px */
+/* 35rem is also 700px when basefont is 16px */
 @media only screen and (min-width: 700px) {
 
     nav {

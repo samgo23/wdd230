@@ -216,6 +216,22 @@ footer p {
     right: 2em;
 }
 
-
 .meeting.closed {display: none;}
+
+#weather {
+    display: grid;justify-content: start;
+    align-items: center;
+    justify-items: end;
+}
+span.temperature, span.wind-speed {
+    grid-column: 1/2;
+}
+input.temperature, input.wind-speed, #submit{
+    grid-column: 2/3;
+}
+#windChill {
+    padding: 0 1em;
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
 /*.meeting.closed span:nth-child(2) {display: block;}*/

@@ -17,23 +17,25 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="images/mirrormont.png" alt="Mirrormont Chamber of Commerce Logo">
+        <picture>
+            <img id="logo" src="images/mirrormont.webp" alt="Mirrormont Chamber of Commerce Logo">
+        </picture>
+        
         <h1>Mirrormont Chamber of Commerce</h1>
-        <div>
+        <div id="social">
             <img src="images/facebook.png" alt="Facebook"><a href="facebook.com"></a>
             <img src="images/linkedin.png" alt="LinkedIn"><a href="linkedin.com"></a>
         </div>
         <nav>
             <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-                    <ul id="primaryNav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Blog</a></li>   
-                    </ul>
-                    
-                </nav>
+            <ul id="primaryNav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>   
+            </ul>
+        </nav>
             
         <!-- display current date with Javascript -->
         <span id="dateTime"></span>
@@ -42,7 +44,7 @@
         <div id="hero">
             <h2>Mirrormont</h2>
             <picture>
-                <img src="https://placekitten.com/800/300" alt="hero image">
+                <img src="images/wdd230-org-1200.png" alt="hero image" sizes 2x srcset="images/wdd230-org-400.jpg 400w, images/wdd230-org-700.png 700w">
             </picture>
             <section class="join-us">
                 <h3>Join Us!</h3>
@@ -51,23 +53,28 @@
                 <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
             </div>
         </div>
-        <div id="event">
+        <div id="event" class="info">
             <h2>Events</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum repudiandae, eaque cum sunt quis.</p>
         </div>
-        <div id="weather">
+        <div id="weather" class="info">
             <h2>Weather</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum repudiandae, eaque cum sunt quis.</p>
+            <span class="temperature">Temperature</span>
+            <input class="temperature" value="">
+            <span class="wind-speed">Wind Speed</span>
+            <input class="wind-speed" value="">
+            <button id="submit"type="submit">Calculate</button>
+            <span id='windChill'></span>
         </div>
-        <div id="news">
+        <div id="news" class="info">
             <h2>News</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum repudiandae, eaque cum sunt quis.</p>
         </div>
-        <div id="join">
+        <div id="join" class="info">
             <h2>Join</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum repudiandae, eaque cum sunt quis.</p>
         </div>
-        <div id="spotlights">
+        <div id="spotlights" class="info">
             <div id="spotlight1">
                 <h3>Spotlight</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum repudiandae, eaque cum sunt quis.</p>
@@ -88,11 +95,12 @@
     </main>
     <footer>
         <!-- The footer contains the logo (a placeholder icon/image is fine for now), contact information, a link to a map, and a base footer with a dynamic copyright year (driven by JavaScript), site name, your name, "WDD 230 Project", and the last modification date driven by JavaScript. -->
-        <img id="logo" src="images/mirrormont.png" alt="Mirrormont Chamber of Commerce Logo">
+        <img id="logo" src="images/mirrormont.webp" alt="Mirrormont Chamber of Commerce Logo">
         <div>
             <p><a href="#">email@mirrormontchamber.com</a> | <a href="#">map</a> | &copy;<span id="year"> </span> | <a href="index.html">MirrormontChamberofCommerce.com</a> | Sam Gordon | WDD 230 Project | <span id="modify"></span></p>
         </div>
     </footer>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
