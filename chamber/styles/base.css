@@ -28,7 +28,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: .75rem;
-    border: 1px solid rgba(248, 112, 96, 0.2);
+    /*border: 1px solid rgba(248, 112, 96, 0.2);*/
 }
 header,
 main,
@@ -234,4 +234,50 @@ input.temperature, input.wind-speed, #submit{
     grid-column: 2/3;
     grid-row: 5/6;
 }
-/*.meeting.closed span:nth-child(2) {display: block;}*/
+
+/*Discover page styling*/
+
+#discover-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    
+}
+#discover-container h2 {
+    font-size: 2em;
+    padding: 0 .3em;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .7);
+    text-align: center;
+}
+img[data-src] {
+    filter: blur(0.2em);
+}
+
+img.clear {
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+#club-div {
+    border: none;
+}
+#mirrormont_sign {
+    max-width: 100%;
+}
+#country_club {
+    max-width: 60%;
+    border-radius: 5px;
+    float: right;
+        
+}
+#forest {
+    max-width: 100%;
+}
+.hover:hover {box-shadow: 0 0 50px #333;}
+
+#trehouse {
+    max-width: 300px;
+}
+#info2, #info3 {
+    padding: .7em;
+}

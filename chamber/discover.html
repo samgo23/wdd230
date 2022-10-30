@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Roboto+Slab:wght@500&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Discover</title>
+</head>
+<body>
+    <header>
+        <picture>
+            <img class="logo" src="images/mirrormont.webp" alt="Mirrormont Chamber of Commerce Logo">
+        </picture>
+        
+        <h1>Discover Page</h1>
+        <div id="social">
+            <img src="images/facebook.png" alt="Facebook"><a href="facebook.com"></a>
+            <img src="images/linkedin.png" alt="LinkedIn"><a href="linkedin.com"></a>
+        </div>
+        <nav>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>   
+            </ul>
+        </nav>
+            
+        <!-- display current date with Javascript -->
+        <span id="dateTime"></span>
+    </header>
+    <main>
+        <div id="discover-container">
+            
+            <picture>
+                <img data-src="images/mirrormont_sign980.jpg" alt="Img 1" src="placeholder-300x400.png" id="mirrormont_sign" srcset="images/mirrormont_sign640.jpg 640w">
+                <h2>Discover Mirrormont</h2>
+            </picture>
+            <div id="club-div" class="hover">
+                
+                <p id="info1" class="demo-info">As of the census of 2000, there were 3,804 people, 1,330 households, and 1,110 families residing in the CDP. The population density was 367.3 people <img data-src="images/country_club.jpg" alt="Img 2"  src="images/placeholder-300x400.png" id="country_club" >per square mile (141.8/km2). The racial makeup of the CDP was 94.03% White, 0.45% African American, 0.58% Native American, 1.37% Asian, 0.13% Pacific Islander, 0.81% from other races, and 2.63% from two or more races. Hispanic or Latino of any race were 1.68% of the population. </p>
+                
+            </div>
+            <img data-src="images/forest.jpg" alt="Img 3"  src="images/placeholder-300x400.png" id="forest" srcset="images/forest400.jpg 400w, images/forest1000.jpg 1000w">
+            <p id="info2" class="demo-info">There were 1,330 households, out of which 39.4% had children under the age of 18 living with them, 76.6% were married couples living together, 4.0% had a female householder with no husband present, and 16.5% were non-families. 12.2% of all households were made up of individuals, and 2.7% had someone living alone who was 65 years of age or older. The average household size was 2.81 and the average family size was 3.05.
+        
+            In the CDP the population was spread out, with 26.9% under the age of 18, 4.8% from 18 to 24, 27.9% from 25 to 44, 32.5% from 45 to 64, and 7.8% who were 65 years of age or older. The median age was 41 years. For every 100 females there were 103.7 males. For every 100 females age 18 and over, there were 100.8 males.</p>
+            
+            
+            <img data-src="images/Treehouse.jpg" alt="Img 4"  src="images/placeholder-300x400.png" id="treehouse" class="hover">
+            <p id="info3" class="demo-info">The median income for a household in the CDP was $87,945, and the median income for a family was $90,413. Males had a median income of $70,365 versus $38,929 for females. The per capita income for the CDP was $35,200. About 3.1% of families and 5.7% of the population were below the poverty line, including 6.3% of those under age 18 and 4.5% of those age 65 or over.</p>
+            <img data-src="images/mirrrormontstables.jpg" alt="Img 5"  src="images/placeholder-300x400.png" id="stables" class="hover">
+            <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+        </div>
+        
+    </main>
+    <footer>
+        
+        <img class="logo" src="images/mirrormont.webp" alt="Mirrormont Chamber of Commerce Logo">
+        <div>
+            <p><a href="#">email@mirrormontchamber.com</a> | <a href="#">map</a> | &copy;<span id="year"> </span> | <a href="index.html">MirrormontChamberofCommerce.com</a> | Sam Gordon | WDD 230 Project | <span id="modify"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
