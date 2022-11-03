@@ -37,7 +37,7 @@ function isMonTues(day) {
         return false; 
     } 
 } 
-//document.querySelector(".meeting").classList.add("closed"); 
+document.querySelector(".meeting").classList.add("closed"); 
 
 // Lazy load
 let images = document.querySelectorAll('[data-src]');

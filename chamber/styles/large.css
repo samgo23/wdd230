@@ -53,5 +53,9 @@
     .info {
         max-width: 250px;
     }
+    .meeting p {
+        padding: 0;
+        font-size: .8em;
+    }
 
-    }/* End Medium */
+    }/* Ends Large */

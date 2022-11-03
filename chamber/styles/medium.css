@@ -24,7 +24,9 @@
     main div {
         padding: 0;
     }
-   
+   h2, h3 {
+    padding-left: 1em;
+   }
 
     #hero {
         grid-column: 1/-1;
@@ -38,6 +40,9 @@
         display: block;
         grid-column: 1/-1;
         grid-row: 4/5;
+    }
+    .join-us h3 {
+        padding: 0;
     }
     #spotlights {
         grid-column: 1/-1;
