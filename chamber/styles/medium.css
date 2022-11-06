@@ -123,5 +123,8 @@
         border-radius: 5px;
         
     }
+    form label.top, form div {
+        font-size: 1em;
+    }
 
     } /* end medium 

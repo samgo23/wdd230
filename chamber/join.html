@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Roboto+Slab:wght@500&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Join Us</title>
+</head>
+<body>
+    <header>
+        <picture>
+            <img class="logo" src="images/mirrormont.webp" alt="Mirrormont Chamber of Commerce Logo">
+        </picture>
+        
+        <h1>Mirrormont Chamber of Commerce</h1>
+        <div id="social">
+            <img src="images/facebook.png" alt="Facebook"><a href="facebook.com"></a>
+            <img src="images/linkedin.png" alt="LinkedIn"><a href="linkedin.com"></a>
+        </div>
+        <nav>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>   
+            </ul>
+        </nav>
+            
+        <!-- display current date with Javascript -->
+        <span id="dateTime"></span>
+    </header>
+    <main id="form">
+        <form action="thanks.html" method="get">
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label class="top">First Name* <input type="text" name="fname" id="fname" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" id="lname" required></label>
+                <!-- add only accepts alpha characters, hyphens, and spaces with a minimum of seven characters using a regular expressionLinks to an external site. pattern.-->
+                <label class="top">Business Title <input type="text" name="fname" id="bTitle" ></label>
+                <label class="top">Email* <input type="email" name="email" id="email" required placeholder="someone@gmail.com"></label>
+                <label class="top">Phone <input type="tel" name="phone" id="phone" placeholder="1235551234" required></label>
+                <label class="top">Business Name <input type="text" name="businessName" id="businessName" required></label>
+                <!-- Hiddenfield to capture time the page was loaded-->
+                <label class="top"><input type="datetime-local" name="time" id="timeLoaded"></input></label>
+            </fieldset>
+            <fieldset id="membershipLevel">
+                <legend>Membership Level</legend>
+                <label class="top">Select a Membership</label>
+                <label class="sbs"><input type="radio" name="audience" value="npMembership"> 
+                    <section class="membershipTier" id="nbMembership">
+                        NP Membership
+                        <h3>Price</h3>
+                        <span>Free</span>
+                        <h3>Benefits:</h3>
+                        <ul>
+                            <li>Chamber Directory and Calendar Access</li>
+                            <li>Member Pricing at Events</li>
+                            <li>Buy Additional Sponsorships</li>
+                        </ul>
+                    </section>
+                </label>
+                <label class="sbs"><input type="radio" name="audience" value="bronzeMembership"> 
+                    <section class="membershipTier" id="bronzeMembership">
+                        Bronze Membership
+                        <h3>Price</h3>
+                        <span>$1,500</span>
+                        <h3>Benefits:</h3>
+                        <ul>
+                            <li>Chamber Directory and Calendar Access</li>
+                            <li>Member Pricing at Events</li>
+                            <li>Buy Additional Sponsorships</li>
+                            <li>Logo on Website and Printed Collateral</li>
+                        </ul>
+                    </section>
+                </label>
+                <label class="sbs"><input type="radio" name="audience" value="silverMembership"> 
+                    <section class="membershipTier" id="silverMembership">
+                        Silver Membership
+                        <h3>Price</h3>
+                        <span>$3,000</span>
+                        <h3>Benefits:</h3>
+                        <ul>
+                            <li>Chamber Directory and Calendar Access</li>
+                            <li>Member Pricing at Events</li>
+                            <li>Buy Additional Sponsorships</li>
+                            <li>Logo on Website and Printed Collateral</li>
+                            <li>Invitation to Chamber Committees</li>
+                        </ul>
+                    </section>
+                </label>
+                <label class="sbs"><input type="radio" name="audience" value="goldMembership"> 
+                    <section class="membershipTier" id="goldMembership">
+                        Gold Membership
+                        <h3>Price</h3>
+                        <span>$5,000</span>
+                        <h3>Benefits:</h3>
+                        <ul>
+                            <li>Chamber Directory and Calendar Access</li>
+                            <li>Member Pricing at Events</li>
+                            <li>Buy Additional Sponsorships</li>
+                            <li>Seat on Board of Directors or Executive Roundtable</li>
+                            <li>Priority Invitations to Special Events</li>
+                        </ul>
+                    </section>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Business Discription</legend>
+                <label class="top">Discribe Your Business <textarea type="textarea" name="bDiscription" value="" placeholder="My business has..." rows="15" id="bDiscription"></textarea> </label>
+            </fieldset>
+
+            <input type="submit" value="Send My Application"  class="submitBtn">
+            
+            
+        </form>
+    </main>
+    <footer>
+        <img class="logo" src="images/mirrormont.webp" alt="Mirrormont Chamber of Commerce Logo">
+        <div>
+            <p><a href="#">email@mirrormontchamber.com</a> | <a href="#">map</a> | &copy;<span id="year"> </span> | <a href="index.html">MirrormontChamberofCommerce.com</a> | Sam Gordon | WDD 230 Project | <span id="modify"></span></p>
+        </div>
+        <script src="scripts/scripts.js"></script>
+    </footer>
+</body>
+</html>
