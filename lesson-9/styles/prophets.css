@@ -1,0 +1,58 @@
+header,
+main,
+footer {
+    margin: 1rem;
+    position: relative;
+}
+
+header, 
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+main div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    
+}
+
+section {
+    margin: 5px;
+    position: relative;
+}
+section h2,
+section div {
+    position: absolute;
+    left: 10px;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 5px 10px;
+    border-radius: 10px;
+    
+
+}
+section h2{
+    top: -10px;
+    
+}
+section div {
+    display: block;
+    z-index: 1;
+    bottom: 20px;
+    font-size: 1rem;
+    
+}
+section div p {
+    margin: 5px;
+    font-size: 1.3rem;
+}
+section img {
+    max-width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
