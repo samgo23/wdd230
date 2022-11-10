@@ -1,5 +1,5 @@
 // Business Directory JSON 
-let jsonBusinessFile = '/Users/samgordon/wdd 230/wdd230/chamber/data.json';
+let jsonBusinessFile = 'https://raw.githubusercontent.com/samgo23/wdd230/main/chamber/data.json';
 
 fetch(jsonBusinessFile)
   .then(function (response) {
@@ -16,13 +16,11 @@ fetch(jsonBusinessFile)
     let logo = document.createElement('img');
     let contact = document.createElement('div');
     let phoneNumber = document.createElement('p');
-    let email = document.createElement('p');
     let address = document.createElement('p');
 
     // Business info
     h2.textContent = (`${business.name}`);
-    phoneNumber.textContent = (`${business.phone_nember}`)
-    email.textContent = (`${business.email}`)
+    phoneNumber.textContent = (`${business.phone_number}`)
     address.textContent = (`${business.address}`)
 
     //Business logo
@@ -35,7 +33,6 @@ fetch(jsonBusinessFile)
     card.appendChild(logo);
     card.appendChild(contact);
     contact.appendChild(phoneNumber);
-    contact.appendChild(email);
     contact.appendChild(address);
 
     // append to doc
