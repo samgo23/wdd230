@@ -1,0 +1,59 @@
+{
+    "businesses": [
+        {
+            "name": "Costco Wholesale",
+            "phone_number": "(425) 313-0965, Ext 226",
+            "address": "1801 10th Ave NW Issaquah WA 98027",
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/1095/MemLogoSearch_costco%20-logo%20(1).jpg"
+        },
+        {
+            "name": "EverGreen Ford",
+            "phone_number": "(425) 392-6900",
+            "address": "1500 18th Ave NW Issaquah WA 98027",
+            "imageurl": "https://business.issaquahchamber.com/list/member/evergreen-ford-lincoln-chevrolet-issaquah-1100"
+        },
+        {
+            "name": "Puget Sound Energy",
+            "phone_number": "(425) 452-1234",
+            "address": "355 110th Ave NE Bellevue WA 98009-9734",
+            "imageurl": "https://business.issaquahchamber.com/list/member/puget-sound-energy-bellevue-546"
+        },
+        {
+            "name": "Providence Swedish Medical Center",
+            "phone_number": "(425) 313-4000",
+            "address": "751 NE Blakely Dr Issaquah WA 98029",
+            "imageurl": "https://business.issaquahchamber.com/list/member/swedish-medical-center-issaquah-campus-2046"
+        },
+        {
+            "name": "East Side Research Associates",
+            "phone_number": "(425) 869-6828",
+            "address": "8301 161st Ave NE Suite 204 Redmond WA 98052",
+            "imageurl": "https://business.issaquahchamber.com/list/member/eastside-research-associates-11363"
+        },
+        {
+            "name": "Juniper Capital",
+            "phone_number": "(425) 761-8017",
+            "address": "123 ",
+            "imageurl": "#"
+        },
+        {
+            "name": "Boehms Candies Inc",
+            "phone_number": "(425) 392-6652",
+            "address": "255 NE Gilman Blvd Issaquah WA 98027",
+            "imageurl": "https://business.issaquahchamber.com/list/member/boehms-candies-inc-issaquah-943"
+        },
+        {
+            "name": "Fischer Meats",
+            "phone_number": "(425) 392-3131",
+            "address": "85 Front St N Issaquah WA 98027 ",
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/250/MemLogoSearch_download%20(5).png"
+        },
+        {
+            "name": "Gerk's SKi abd Cycle",
+            "phone_number": "(425) 270-3061",
+            "address": "1485 11th Ave NWIssaquah WA 98027",
+            "imageurl": "https://business.issaquahchamber.com/list/member/gerk-s-ski-and-cycle-issaquah-9228"
+        }
+
+    ]
+}
