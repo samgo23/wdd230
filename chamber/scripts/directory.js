@@ -18,6 +18,7 @@ fetch(jsonBusinessFile)
     let phoneNumber = document.createElement('p');
     let address = document.createElement('p');
 
+
     // Business info
     h2.textContent = (`${business.name}`);
     phoneNumber.textContent = (`${business.phone_number}`)
@@ -36,5 +37,25 @@ fetch(jsonBusinessFile)
     contact.appendChild(address);
 
     // append to doc
-    document.querySelector('div.cards').appendChild(card);
+    document.querySelector('section.cards').appendChild(card);
   }
+
+// toggle menu view
+
+const gridbutton = document.getElementById("grid");
+const listbutton = document.getElementById("list");
+const display = document.querySelector(".cards");
+
+
+gridbutton.addEventListener("click", () => {
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+
+listbutton.addEventListener("click", () =>{
+  display.classList.add("list");
+	display.classList.remove("grid");
+}); 
+
+
