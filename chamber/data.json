@@ -4,55 +4,64 @@
             "name": "Costco Wholesale",
             "phone_number": "(425) 313-0965, Ext 226",
             "address": "1801 10th Ave NW Issaquah WA 98027",
-            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/1095/MemLogoSearch_costco%20-logo%20(1).jpg"
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/1095/MemLogoSearch_costco%20-logo%20(1).jpg",
+            "memership_level": "3"
         },
         {
             "name": "EverGreen Ford",
             "phone_number": "(425) 392-6900",
             "address": "1500 18th Ave NW Issaquah WA 98027",
-            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/1100/MemLogo_EvergreenLarge.png"
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/1100/MemLogo_EvergreenLarge.png",
+            "memership_level": "3"
         },
         {
             "name": "Puget Sound Energy",
             "phone_number": "(425) 452-1234",
             "address": "355 110th Ave NE Bellevue WA 98009-9734",
-            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/546/MemLogo_PSE_Vertcolor%20(1)_310320-031107.jpg"
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/546/MemLogo_PSE_Vertcolor%20(1)_310320-031107.jpg",
+            "memership_level": "2"
         },
         {
             "name": "Providence Swedish Medical Center",
             "phone_number": "(425) 313-4000",
             "address": "751 NE Blakely Dr Issaquah WA 98029",
-            "imageurl": "https://chambermaster.blob.core.windows.net/images/customers/684/members/2046/logos/MEMBER_PAGE_HEADER/SwedishIssaqua-2c-v-ECEC.jpg"
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/customers/684/members/2046/logos/MEMBER_PAGE_HEADER/SwedishIssaqua-2c-v-ECEC.jpg",
+            "memership_level": "1"
         },
         {
             "name": "East Side Research Associates",
             "phone_number": "(425) 869-6828",
             "address": "8301 161st Ave NE Suite 204 Redmond WA 98052",
-            "imageurl": "https://static.wixstatic.com/media/77d3c7_55365d8666b84e25ba39aa65ceb82703~mv2.png/v1/crop/x_32,y_0,w_1519,h_845/fill/w_288,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/era_logo_2.png"
+            "imageurl": "https://static.wixstatic.com/media/77d3c7_55365d8666b84e25ba39aa65ceb82703~mv2.png/v1/crop/x_32,y_0,w_1519,h_845/fill/w_288,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/era_logo_2.png",
+            "memership_level": "1"
         },
         {
             "name": "Juniper Capital",
             "phone_number": "(425) 677-8574",
             "address": "11 Front Street S Issaquah WA 98027",
-            "imageurl": "https://www.junipercapitalcorp.com/wp-content/themes/cma-juniper/images/logo.png"
+            "imageurl": "https://www.junipercapitalcorp.com/wp-content/themes/cma-juniper/images/logo.png",
+            "memership_level": "2"
         },
         {
             "name": "Boehms Candies Inc",
             "phone_number": "(425) 392-6652",
             "address": "255 NE Gilman Blvd Issaquah WA 98027",
-            "imageurl": "https://boehmscandies.com/wp-content/uploads/2016/06/boehms-mobile-header.png"
+            "imageurl": "https://boehmscandies.com/wp-content/uploads/2016/06/boehms-mobile-header.png",
+            "memership_level": "0"
         },
         {
             "name": "Fischer Meats",
             "phone_number": "(425) 392-3131",
             "address": "85 Front St N Issaquah WA 98027 ",
-            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/250/MemLogoSearch_download%20(5).png"
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/250/MemLogoSearch_download%20(5).png",
+            "memership_level": "1"
         },
         {
             "name": "Gerk's SKi and Cycle",
             "phone_number": "(425) 270-3061",
             "address": "1485 11th Ave NWIssaquah WA 98027",
-            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/9228/MemLogo_Gerks.jpg"
+            "imageurl": "https://chambermaster.blob.core.windows.net/images/members/684/9228/MemLogo_Gerks.jpg",
+            "memership_level": "1"
         }
 
     ]
