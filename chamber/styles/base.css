@@ -151,6 +151,7 @@ main div {
     margin: 5px;
 }
 #spotlights div {
+    background-color: none;
     border: none;
     border-left: 3px solid rgba(0,0,0, .2);
     border-right: 3px solid rgba(0,0,0, .2);
