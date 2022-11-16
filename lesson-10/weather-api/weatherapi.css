@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main h1 {
+    font-size: 7vw;
+    background-image: url(https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg?w=1800&t=st=1668558437~exp=1668559037~hmac=8d76a5f32b42eeb0c97bc1c0ed516dea416e082a5822fe96494e2cb63edc0654);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
