@@ -67,7 +67,7 @@ h1 {
     color: var(--main-color);
 }
 h2 {
-    color: #536878
+    color: var(--main-color)
 }
 
 h1, p {
@@ -198,8 +198,8 @@ footer p {
 }
 .join-us {
 	position: absolute;
-	bottom: 2em;
-	right: 3em;
+	bottom: 1em;
+	left: 2em;
 }
 .join-us,
 .meeting {
@@ -228,9 +228,11 @@ footer p {
 .meeting.closed {display: none;}
 
 #weather {
-    display: grid;justify-content: start;
+    display: grid;
+    justify-content: start;
     align-items: center;
-    justify-items: end;
+    justify-items: center;
+    width: 100%;
 }
 span.temperature, span.wind-speed {
     grid-column: 1/2;
