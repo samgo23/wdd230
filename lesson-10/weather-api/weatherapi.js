@@ -1,5 +1,6 @@
 // select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
+const windSpeed = document.querySelector('#wind-speed');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 
@@ -39,6 +40,7 @@ async function getWeather(url) {
       let feelsLike = main.feels_like;
       let tempMin = main.temp_min;
       let tempMax = main.temp_max;
+
       
       let output = [
         {id: '#temp', data: temp},
@@ -58,10 +60,13 @@ async function getWeather(url) {
   };
 function displayResults(weatherData) {
   currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
+  windSpeed.innerHTML = `<strong>${wind.speed.toFixed(0)}</strong>`;
   let iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
   let desc = weatherData.weather[0].description;
 
   weatherIcon.setAttribute('src', iconsrc)
   weatherIcon.setAttribute('alt', desc);
   captionDesc.textContent = desc;
+
+  
 }

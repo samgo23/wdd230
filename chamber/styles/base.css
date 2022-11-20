@@ -451,32 +451,12 @@ section.grid p {
 section.list section img {
     display: none;
 }
-/*
-section.grid {
-    margin: 5px;
-    position: relative;
-}
-section.grid h2,
-section.grid div {
-    position: absolute;
-    left: 10px;
-    background-color: rgba(255, 255, 255, .4);
-    padding: 5px 10px;
-    border-radius: 10px;
-    
 
+.spotlight img {
+    max-width: 100%;
 }
-section.grid h2{
-    top: -10px;
-    
+.spotlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-section.grid div {
-    display: block;
-    z-index: 1;
-    bottom: 20px;
-    font-size: 1rem;
-    
-}
-
-
-*/
