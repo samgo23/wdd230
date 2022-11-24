@@ -1,7 +1,7 @@
 /*toggle menu function*/
 function toggleMenu() {
-    document.getElementById("primaryNav").classList.toggle("open");
-    document.getElementById("hamburgerBtn").classList.toggle("open");
+  document.getElementById("primaryNav").classList.toggle("open");
+  document.getElementById("hamburgerBtn").classList.toggle("open");
 }
 
 const x = document.getElementById('hamburgerBtn')
@@ -23,7 +23,7 @@ document.querySelector('#year').innerHTML = year;
 async function timeLoaded() {
   try {
     document.querySelector('#timeLoaded').innerHTML = fullDate;
-  } catch(error){
+  } catch (error) {
     console.log(error);
   }
 };
@@ -37,24 +37,24 @@ Time = document.lastModified;
 document.querySelector("#modify").innerHTML = document.lastModified;
 
 //const meetingDay = new Date();
-async function meetingAnnouncement () {
+async function meetingAnnouncement() {
   try {
     const monTues = dateTime.getDate();
 
     function isMonTues(day) {
-        if (day === 1){
-            return true;
-        }
-        else if (day === 2) {
-            return true;
-        }
-        else {
-            return false; 
-        } 
-    } 
+      if (day === 1) {
+        return true;
+      }
+      else if (day === 2) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
     isMonTues(monTues);
-    
-    document.querySelector(".meeting").classList.add("closed"); 
+
+    document.querySelector(".meeting").classList.add("closed");
   } catch (error) {
     console.log(error);
   }
@@ -63,7 +63,7 @@ meetingAnnouncement();
 
 
 
-async function weatherApi () {
+async function weatherApi() {
   try {
     // select HTML elements in the document
     const currentTemp = document.querySelector('#current-temp');
@@ -81,63 +81,63 @@ async function weatherApi () {
     let url = api + city + apiKey + unit;
 
     async function apiFetch() {
-        try {
-            const response = await fetch(url);
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data); // this is for testing the call 
-                displayResults(data);
-            } else {
-                throw Error(await response.text());
-            }
-
-            // gets data from api and displays on DOM
-            function displayResults(weatherData) {
-              currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-              windSpeed.innerHTML = `<strong>${weatherData.wind.speed.toFixed(0)}</strong>`;
-              let iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-              let desc = weatherData.weather[0].description;
-            
-              weatherIcon.setAttribute('src', iconsrc)
-              weatherIcon.setAttribute('alt', desc);
-              captionDesc.textContent = desc;
-            }
-
-
-        } catch (error) {
-            console.log(error);
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data); // this is for testing the call 
+          displayResults(data);
+        } else {
+          throw Error(await response.text());
         }
+
+        // gets data from api and displays on DOM
+        function displayResults(weatherData) {
+          currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
+          windSpeed.innerHTML = `<strong>${weatherData.wind.speed.toFixed(0)}</strong>`;
+          let iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+          let desc = weatherData.weather[0].description;
+
+          weatherIcon.setAttribute('src', iconsrc)
+          weatherIcon.setAttribute('alt', desc);
+          captionDesc.textContent = desc;
+        }
+
+
+      } catch (error) {
+        console.log(error);
+      }
     };
     apiFetch();
 
     // windchill calulations 
-    let s =  windSpeed**0.16;
+    let s = windSpeed ** 0.16;
 
 
-    async function calculateWindChill (url) {
-        const response = await fetch(url)
-        if (response.ok) {
-          
-          let t = document.querySelector('#current-temp').value;
-          let windSpeed = document.querySelector('#wind-speed').value;
-          console.log(t, windSpeed);
-          if (t <= 50 && windSpeed > 3 ) {
-              let f = 35.74 + (0.6215 * t) - (35.75 * s) + (0.4275 * t * s);
-              console.log(f);
-              let windFactor = f.toString();
-              console.log(windFactor);
-              document.querySelector('#windChill').textContent = windFactor;
-          }
-          else {
-              document.querySelector('#windChill').textContent = 'n/a';
-          };
-        };   
+    async function calculateWindChill(url) {
+      const response = await fetch(url)
+      if (response.ok) {
+
+        let t = document.querySelector('#current-temp').value;
+        let windSpeed = document.querySelector('#wind-speed').value;
+        console.log(t, windSpeed);
+        if (t <= 50 && windSpeed > 3) {
+          let f = 35.74 + (0.6215 * t) - (35.75 * s) + (0.4275 * t * s);
+          console.log(f);
+          let windFactor = f.toString();
+          console.log(windFactor);
+          document.querySelector('#windChill').textContent = windFactor;
+        }
+        else {
+          document.querySelector('#windChill').textContent = 'n/a';
+        };
+      };
     };
 
 
     calculateWindChill(url);
 
-  }catch (error){
+  } catch (error) {
     console.log(error);
   };
 };
@@ -150,7 +150,7 @@ async function ifImage() {
 
   function preloadImage(img) {
     const src = img.getAttribute('data-src');
-    if(!src) {
+    if (!src) {
       return;
     }
     img.src = src;
@@ -158,29 +158,29 @@ async function ifImage() {
   }
 
   let imgOptions = {
-      threshold: 0,
-      rootMargin: '0px 0px -500px 0px'
+    threshold: 0,
+    rootMargin: '0px 0px -500px 0px'
   };
 
   const loadImages = (image) => {
     image.setAttribute('src', image.getAttribute('data-src'));
-    image.onLoad = () => {image.removeAttribute('data-src');};
+    image.onLoad = () => { image.removeAttribute('data-src'); };
   }
 
   const imgObserver = new IntersectionObserver((items, imgObserver) => {
-      items.forEach(item => {
-        if (!item.isIntersecting) {
-          return;
-        } else{
-          preloadImage(item.target);
-          imgObserver.unobserve(item.target);
-        }
-      }, imgOptions);
-    });
+    items.forEach(item => {
+      if (!item.isIntersecting) {
+        return;
+      } else {
+        preloadImage(item.target);
+        imgObserver.unobserve(item.target);
+      }
+    }, imgOptions);
+  });
 
   images.forEach(image => {
     imgObserver.observe(image);
-    });
+  });
 
 }
 
@@ -193,9 +193,9 @@ let numVisits = Number(window.localStorage.getItem("visits-ls"));
 /*
 // first time check
 if (numVisits !== 0) {
-	visitsDisplay.textContent = numVisits;
+  visitsDisplay.textContent = numVisits;
 } else {
-	visitsDisplay.textContent = `This is your first visit!`;
+  visitsDisplay.textContent = `This is your first visit!`;
 }
 */
 // number of visits by +1 & store new number
@@ -208,19 +208,75 @@ async function buisnessCards() {
     let jsonBusinessFile = 'https://raw.githubusercontent.com/samgo23/wdd230/main/chamber/data.json';
 
     const response = await fetch(jsonBusinessFile);
-      if (response.ok) {
-          const data = await response.json();
-          console.log(data); // this is for testing the call 
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data); // this is for testing the call 
 
-          const businesses = data['businesses'];
-          businesses.forEach(displayBusinesses);
+      const businesses = data['businesses'];
+      businesses.forEach(displayBusinesses);
 
-          
-          
-      }else {
-        throw Error(await response.text());
-        };
-      function displayBusinesses(business) {
+
+
+    } else {
+      throw Error(await response.text());
+    };
+    function displayBusinesses(business) {
+      let card = document.createElement('section');
+      let h2 = document.createElement('h2');
+      let logo = document.createElement('img');
+      let contact = document.createElement('div');
+      let phoneNumber = document.createElement('p');
+      let address = document.createElement('p');
+
+
+      // Business info
+      h2.textContent = (`${business.name}`);
+      phoneNumber.textContent = (`${business.phone_number}`)
+      address.textContent = (`${business.address}`)
+
+      //Business logo
+      logo.setAttribute('src', business.imageurl);
+      logo.setAttribute('alt', (`${business.name} logo`))
+      logo.setAttribute('loading', 'lazy')
+
+      // append to card
+      card.appendChild(h2);
+      card.appendChild(logo);
+      card.appendChild(contact);
+      contact.appendChild(phoneNumber);
+      contact.appendChild(address);
+
+      // append to doc
+      document.querySelector('section.cards').appendChild(card);
+    };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+buisnessCards();
+
+async function spotLights() {
+  try {
+    let jsonBusinessFile = 'https://raw.githubusercontent.com/samgo23/wdd230/main/chamber/data.json';
+
+    const response = await fetch(jsonBusinessFile);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data); // this is for testing the call 
+
+      const businesses = data['businesses'];
+      businesses.forEach(spotLight);
+
+
+    } else {
+      throw Error(await response.text());
+    };
+
+    function spotLight(business) {
+      if (business.memership_level >= 2) {
+        console.log('works')
+        let div = document.createElement('div');
         let card = document.createElement('section');
         let h2 = document.createElement('h2');
         let logo = document.createElement('img');
@@ -234,7 +290,7 @@ async function buisnessCards() {
         phoneNumber.textContent = (`${business.phone_number}`)
         address.textContent = (`${business.address}`)
 
-        //Business logo
+        //Buisness logo
         logo.setAttribute('src', business.imageurl);
         logo.setAttribute('alt', (`${business.name} logo`))
         logo.setAttribute('loading', 'lazy')
@@ -246,66 +302,10 @@ async function buisnessCards() {
         contact.appendChild(phoneNumber);
         contact.appendChild(address);
 
+
         // append to doc
-        document.querySelector('section.cards').appendChild(card);
-      };
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-buisnessCards();
-
-async function spotLights() {
-  try {
-    let jsonBusinessFile = 'https://raw.githubusercontent.com/samgo23/wdd230/main/chamber/data.json';
-
-    const response = await fetch(jsonBusinessFile);
-      if (response.ok) {
-          const data = await response.json();
-          console.log(data); // this is for testing the call 
-
-          const businesses = data['businesses'];
-        businesses.forEach(spotLight);
-          
-          
-      }else {
-        throw Error(await response.text());
-        };
-
-      function spotLight(business) {
-        if (business.memership_level >= 2) {
-          console.log('works')
-          let div = document.createElement('div');
-          let card = document.createElement('section');
-          let h2 = document.createElement('h2');
-          let logo = document.createElement('img');
-          let contact = document.createElement('div');
-          let phoneNumber = document.createElement('p');
-          let address = document.createElement('p');
-
-
-          // Business info
-          h2.textContent = (`${business.name}`);
-          phoneNumber.textContent = (`${business.phone_number}`)
-          address.textContent = (`${business.address}`)
-
-          //Buisness logo
-          logo.setAttribute('src', business.imageurl);
-          logo.setAttribute('alt', (`${business.name} logo`))
-          logo.setAttribute('loading', 'lazy')
-
-          // append to card
-          card.appendChild(h2);
-          card.appendChild(logo);
-          card.appendChild(contact);
-          contact.appendChild(phoneNumber);
-          contact.appendChild(address);
-          
-
-          // append to doc
-          document.querySelector('.spotlight').appendChild(card);
-        }
+        document.querySelector('.spotlight').appendChild(card);
+      }
     }
   } catch (error) {
     console.log(error);
@@ -322,16 +322,16 @@ async function changeLayout() {
     const display = document.querySelector(".cards");
 
     gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
+      display.classList.add("grid");
+      display.classList.remove("list");
     });
-    
-    listbutton.addEventListener("click", () =>{
+
+    listbutton.addEventListener("click", () => {
       display.classList.add("list");
       display.classList.remove("grid");
-    }); 
+    });
 
-  } catch (error){
+  } catch (error) {
     console.log(error);
   };
 };

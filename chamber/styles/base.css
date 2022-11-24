@@ -1,5 +1,9 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-appearance: none;}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-appearance: none;
+}
 
 :root {
     --main-color: #F8F8FF;
@@ -8,14 +12,16 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-appear
     --dark-gray: #494B5B;
     --alt-orange: #A15E5E;
     --primary-orange: #f87060;
-    
+
 }
 
 
-* { 
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     padding: 0;
-	box-sizing: border-box; 
+    box-sizing: border-box;
     border-radius: 5px;
 }
 
@@ -41,12 +47,14 @@ footer {
     justify-content: center;
     padding: .75rem;
 }
+
 header,
 main,
 footer {
     max-width: 1120px;
     margin: 0 auto;
 }
+
 header div {
     display: flex;
     margin: 5px;
@@ -66,11 +74,16 @@ h1 {
     font-size: 2rem;
     color: var(--main-color);
 }
+
 h2 {
-    color: var(--main-color)
+    color: var(--dark-gray);
+    background: radial-gradient(#eee, var(--dark-blue));
+    padding: 0 2em;
+    text-align: center;
 }
 
-h1, p {
+h1,
+p {
     margin: 0 2vw;
 }
 
@@ -87,16 +100,14 @@ nav {
     background-color: var(--main-color);
     margin: 0 auto 0 0;
     max-width: 780px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     text-align: center;
     justify-content: center;
-    background: linear-gradient(90deg, transparent, #F87060, transparent) bottom
-    /
-        var(--d, 0) 3px no-repeat;
-        transition: .7s;
+    background: linear-gradient(90deg, transparent, #F87060, transparent) bottom / var(--d, 0) 3px no-repeat;
+    transition: .7s;
 }
 
 
@@ -125,16 +136,34 @@ nav ul li a:hover {
 }
 
 
-nav ul {display: none;}
-nav ul.open {display: block;}
+nav ul {
+    display: none;
+}
 
-#hamburgerBtn span:nth-child(1) {display: block;}
-#hamburgerBtn span:nth-child(2) {display: none;}
+nav ul.open {
+    display: block;
+}
 
-#hamburgerBtn.open span:nth-child(1) {display: none;}
-#hamburgerBtn.open span:nth-child(2) {display: block;}
+#hamburgerBtn span:nth-child(1) {
+    display: block;
+}
 
-#join, #spotlight3 {display: none;}
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+    display: block;
+}
+
+#join,
+#spotlight3 {
+    display: none;
+}
 
 
 main {
@@ -150,12 +179,13 @@ main div {
     border-radius: 10px;
     margin: 5px;
 }
+
 #spotlights div {
     background-color: none;
     border: none;
-    border-left: 3px solid rgba(0,0,0, .2);
-    border-right: 3px solid rgba(0,0,0, .2);
-    
+    border-left: 3px solid rgba(0, 0, 0, .2);
+    border-right: 3px solid rgba(0, 0, 0, .2);
+
 }
 
 footer {
@@ -168,7 +198,7 @@ footer {
 
 
 footer p {
-	padding: 0.5rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -182,32 +212,36 @@ footer p {
 
 #hero {
     margin: 10px 5px;
-	position: relative;
+    position: relative;
     padding: 0;
     border: none;
     background-color: white;
 }
+
 #hero picture img {
     max-width: 100%;
     height: 100%;
 }
+
 #hero h2 {
     position: absolute;
     left: 1rem;
     font-size: 2.5em;
 }
+
 .join-us {
-	position: absolute;
-	bottom: 1em;
-	left: 2em;
+    position: absolute;
+    bottom: 1em;
+    left: 2em;
 }
+
 .join-us,
 .meeting {
-	background: radial-gradient(#eee, #4567aa);
-	border: 1px solid rgba(0,0,0,.1);
-	padding: 1.5rem;
-	box-shadow: 0 0 30px #333;
-	opacity: 0.8;
+    background: radial-gradient(#eee, var(--dark-blue));
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1.5rem;
+    box-shadow: 0 0 30px #333;
+    opacity: 0.8;
     width: 40%;
     height: 10%;
     display: flex;
@@ -215,17 +249,21 @@ footer p {
     align-items: center;
     border-radius: 30px;
 }
+
 .join-us span {
-	font-style: italic;
-	font-weight: 700;
+    font-style: italic;
+    font-weight: 700;
 }
+
 .meeting {
     position: absolute;
     top: 2em;
     right: 2em;
 }
 
-.meeting.closed {display: none;}
+.meeting.closed {
+    display: none;
+}
 
 #weather {
     display: grid;
@@ -234,12 +272,18 @@ footer p {
     justify-items: center;
     width: 100%;
 }
-span.temperature, span.wind-speed {
+
+span.temperature,
+span.wind-speed {
     grid-column: 1/2;
 }
-input.temperature, input.wind-speed, #submit{
+
+input.temperature,
+input.wind-speed,
+#submit {
     grid-column: 2/3;
 }
+
 #windChill {
     padding: 0 1em;
     grid-column: 2/3;
@@ -252,8 +296,9 @@ input.temperature, input.wind-speed, #submit{
     display: flex;
     flex-direction: column;
     padding: 0;
-    
+
 }
+
 #discover-container h2 {
     font-size: 2em;
     padding: 0 .3em;
@@ -261,6 +306,7 @@ input.temperature, input.wind-speed, #submit{
     background-color: rgba(255, 255, 255, .7);
     text-align: center;
 }
+
 img[data-src] {
     filter: blur(0.2em);
 }
@@ -269,27 +315,36 @@ img.clear {
     filter: blur(0em);
     transition: filter 0.5s;
 }
+
 #club-div {
     border: none;
 }
+
 #mirrormont_sign {
     max-width: 100%;
 }
+
 #country_club {
     max-width: 60%;
     border-radius: 5px;
     float: right;
-        
+
 }
+
 #forest {
     max-width: 100%;
 }
-.hover:hover {box-shadow: 0 0 50px #333;}
+
+.hover:hover {
+    box-shadow: 0 0 50px #333;
+}
 
 #trehouse {
     max-width: 300px;
 }
-#info2, #info3 {
+
+#info2,
+#info3 {
     padding: .7em;
 }
 
@@ -299,9 +354,10 @@ main #form {
     flex-direction: column;
     align-items: flex-start;
 }
+
 form fieldset {
     margin: 2rem .5rem;
-    border: 2px solid var(--primary-blue) ;
+    border: 2px solid var(--primary-blue);
     border-radius: 10px;
     padding: .5rem 2%;
 }
@@ -315,13 +371,17 @@ form legend {
     font-size: 1.5rem;
 }
 
-form label.top, form div {
+form label.top,
+form div {
     display: block;
     padding-top: 1rem;
     color: var(--dark-gray);
     font-size: 1.5rem;
 }
-form label.top input, form label.top textarea, form label.top select {
+
+form label.top input,
+form label.top textarea,
+form label.top select {
     display: block;
     font-size: 1rem;
     border: solid 1px #999;
@@ -330,13 +390,15 @@ form label.top input, form label.top textarea, form label.top select {
     color: #555;
     width: 100%;
     max-width: 20rem;
-    background-color: rgba(0,0,0,0.1)
+    background-color: rgba(0, 0, 0, 0.1)
 }
+
 form label.sbs {
     display: block;
     padding: .75rem 0;
     color: #555;
 }
+
 form input.submitBtn {
     border: none;
     background-color: var(--primary-blue);
@@ -347,13 +409,15 @@ form input.submitBtn {
     width: 96%;
     max-width: 20rem;
 }
+
 form label.top input:required {
     border-left: red solid 6px;
 }
+
 form label.top input:required:valid {
     border-left: green solid 6px;
 }
-  
+
 .membershipTier {
     /* border: linear-gradient(135deg, rgba(255,255,255,1) 5%, rgba(0, 0, 0, 0.4) 75%)  solid 5px; */
     border-radius: 10px;
@@ -362,37 +426,41 @@ form label.top input:required:valid {
 }
 
 .membershipTier h3 {
-    margin: 5px 0 0 0; 
+    margin: 5px 0 0 0;
     padding: 0;
 }
 
 .membershipTier ul {
     margin-top: -.5%;
-    
+
 }
 
 .membershipTier ul li {
     list-style: none;
-    
+
 }
+
 #nbMembership {
     background: var(--white-background);
-    background: linear-gradient(135deg, rgba(255,255,255,0) 5%, rgba(18,121,233,.7) 75%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 5%, rgba(18, 121, 233, .7) 75%);
 }
 
 #bronzeMembership {
     background: var(--white-background);
-    background: linear-gradient(135deg, rgba(255,255,255,0) 5%, rgba(205,127,50,.7) 75%);
-    
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 5%, rgba(205, 127, 50, .7) 75%);
+
 }
+
 #silverMembership {
     background: var(--white-background);
-    background: linear-gradient(135deg, rgba(255,255,255,0) 5%, rgba(192,192,192,.7) 75%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 5%, rgba(192, 192, 192, .7) 75%);
 }
+
 #goldMembership {
     background: var(--white-background);
-    background: linear-gradient(135deg, rgba(255,255,255,0) 5%, rgba(251,214,13,.7) 75%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 5%, rgba(251, 214, 13, .7) 75%);
 }
+
 #timeLoaded {
     display: none;
 }
@@ -405,14 +473,17 @@ form label.top input:required:valid {
     align-items: center;
     flex-direction: column;
 }
+
 #thankyouPage div {
     border-radius: 10px;
     width: 100%;
 
 }
+
 #thankyouPage h1 {
     margin: 5px;
 }
+
 #thankyouPage p {
     padding: 2rem 2rem 60% 1rem;
 }
@@ -422,34 +493,40 @@ main.directory {
     display: flex;
     align-items: flex-start;
 }
+
 .grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	align-items: end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: end;
     justify-items: center;
 }
+
 main.directory button {
     background-color: #85ACC1;
     padding: 0.75rem;
-    border: 5px solid rgba(0,0,0, .5);
+    border: 5px solid rgba(0, 0, 0, .5);
     border-radius: 10px;
     margin: 5px;
 }
+
 section.grid section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 section.grid img {
     max-width: 100%;
     z-index: -1;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
+
 section.grid p {
     margin: 5px;
     font-size: 1.3rem;
 }
+
 section.list section img {
     display: none;
 }
@@ -457,6 +534,7 @@ section.list section img {
 .spotlight img {
     max-width: 100%;
 }
+
 .spotlight {
     display: flex;
     flex-direction: column;
