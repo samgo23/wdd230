@@ -30,7 +30,8 @@
         max-width: fit-content;
     }
 
-    section.spotlight section {
+    section.spotlight section,
+    section.spotlight section img  {
         max-width: 250px;
     }
 
