@@ -30,8 +30,8 @@
         max-width: fit-content;
     }
 
-    #spotlight3 {
-        display: block;
+    section.spotlight section {
+        max-width: 250px;
     }
 
     #spotlights {
@@ -41,6 +41,8 @@
         flex-direction: column;
 
     }
+
+
 
     #events {
         grid-column: 1/2;
