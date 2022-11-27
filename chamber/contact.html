@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,53 +42,29 @@
         <span id="dateTime"></span>
     </header>
     <main>
-        <div id="hero">
-            <h2>Mirrormont</h2>
-            <picture>
-                <img src="images/mirrormont_sign980.jpg" alt="hero image" srcset="images/mirrormont_sign640.jpg 400w">
-            </picture>
-            <section class="join-us">
-                <h3>Join Us!</h3>
-            </section>
-            <div class="meeting">
-                <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
-            </div>
-        </div>
-        <div id="event" class="info">
-            <h2>Events</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus
-                laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum
-                repudiandae, eaque cum sunt quis.</p>
-        </div>
-        <div id="weather" class="info">
-            <h2>Weather</h2>
-            <figure>
-                <img src="" alt="" id="weather-icon" />
-                <figcaption></figcaption>
-            </figure>
-            <p>Current Temperature: <span id="current-temp"></span> &deg;F</p>
-            <span></span>
-            <p>Wind Speed: <span id="wind-speed"></span> MPH</p>
+        <form action="thanks-contact.html" method="get">
+            <fieldset>
+                <legend>Contact Us!</legend>
+                <label class="top">First Name* <input type="text" name="fname" id="fname" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" id="lname" required></label>
+                <!-- add only accepts alpha characters, hyphens, and spaces with a minimum of seven characters using a regular expressionLinks to an external site. pattern.-->
+               
+                <label class="top">Email* <input type="email" name="email" id="email" required placeholder="someone@gmail.com"></label>
+                <label class="top">Phone <input type="tel" name="phone" id="phone" placeholder="1235551234" required></label>
+                <label class="top">Business Name <input type="text" name="businessName" id="businessName" ></label>
+                <label class="top">Business Title <input type="text" name="fname" id="bTitle" ></label>
+                <!-- Hiddenfield to capture time the page was loaded-->
+                <label class="top"><input type="datetime-local" name="time" id="timeLoaded"></input></label>
+            </fieldset>
+            <fieldset>
+                <legend>Leave A Comment</legend>
+                <label class="top">Please leave your comment here<textarea type="textarea" name="bDiscription" value="" placeholder="I just want to say..." rows="15" id="bDiscription"></textarea> </label>
+            </fieldset>
 
-            <p>Wind Chill: <span id='windChill'> </span></p>
-        </div>
-        <div id="news" class="info">
-            <h2>News</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus
-                laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum
-                repudiandae, eaque cum sunt quis.</p>
-        </div>
-        <div id="join" class="info">
-            <h2>Join</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate ea vero sapiente minus
-                laboriosam molestias est illo exercitationem perspiciatis quos quibusdam obcaecati possimus voluptatum
-                repudiandae, eaque cum sunt quis.</p>
-        </div>
-        <div id="spotlights" class="info">
-            <h3>Spotlight</h3>
-            <section class="spotlight"></section>
-        </div>
-
+            <input type="submit" value="Leave My Comment"  class="submitBtn">
+            
+            
+        </form>
 
     </main>
     <footer>
