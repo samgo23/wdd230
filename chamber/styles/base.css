@@ -540,3 +540,7 @@ section.list section img {
     flex-direction: column;
     align-items: center;
 }
+
+.thanks {
+    color: var(--dark-gray)
+}
