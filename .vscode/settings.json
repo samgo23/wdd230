@@ -1,4 +1,5 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.completeFunctionParens": true
+    "python.analysis.completeFunctionParens": true,
+    "livePreview.defaultPreviewPath": "/Users/samgordon/wdd 230/wdd230/final_project/index.html"
 }
