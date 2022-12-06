@@ -36,7 +36,7 @@ async function weatherApi() {
       let api = 'https://api.openweathermap.org/data/2.5/weather?q=';
       let apiKey = '&APPID=b5d3f766a916d0ac9fd887ea4d16baad';
       let unit = '&units=imperial';
-      let city = 'Issaquah'
+      let city = 'Carlsbad'
       let url = api + city + apiKey + unit;
   
       async function apiFetch() {
