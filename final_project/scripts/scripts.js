@@ -237,9 +237,22 @@ async function getFruit() {
         card.removeChild(checkbox)
         arrName.push(fruitDrink.name)
         console.log(arrName);
-        let fname = document.querySelector("#fname");
+        let fname = document.querySelector("#fname").value;
+        let email = document.querySelector("#email").value;
+        let phone = document.querySelector("#phone").value;
+        let special = document.querySelector("#special").value;
+        
+        let orderName = document.querySelector("#order-name");
+        let orderEmail = document.querySelector("#order-email");
+        let orderPhone = document.querySelector("#order-phone");
+        let orderRequest = document.querySelector("#order-request");
+        orderName.innerHTML = fname;
+        orderEmail.innerHTML = email;
+        orderPhone.innerHTML = phone;
+        orderRequest.innerHTML = special;
 
-        console.log(fname)
+
+
 
         document.querySelector('#shopping-cart').appendChild(basket);
         
@@ -285,56 +298,41 @@ async function forecast() {
     let api = 'https://api.openweathermap.org/data/2.5/weather?q=';
     let apiKey = '&APPID=b5d3f766a916d0ac9fd887ea4d16baad';
     let unit = '&units=imperial';
-    let city = 'Carlsbad'
+    let lat = 'let=33.1581';
+    let lon = 'lon=117.3506';
     let url = api + city + apiKey + unit;
-
+    let urlThree = 'https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=33.1581&lon=117.3506&APPID=b5d3f766a916d0ac9fd887ea4d16baad'
     let threeDayAPI = 'https://pro.openweathermap.org/data/2.5/forecast/hourly?q=';
 
-    let urlThree = threeDayAPI + city + apiKey + unit;
+    
 
-    async function apiFetch() {
+    async function apiThree() {
       try {
-        const response = await fetch(url);
 
-        let threeDayAPI = 'https://pro.openweathermap.org/data/2.5/forecast/hourly?q=';
+        const response = await fetch(urlThree);
 
-        let url = threeDayAPI + city + apiKey + unit;
         if (response.ok) {
           const data = await response.json();
+          console.log("working")
           console.log(data); // this is for testing the call 
           displayResults(data);
         } else {
           throw Error(await response.text());
         }
-        
 
         // gets data from api and displays on DOM
         function displayResults(weatherData) {
           currentForeCast.innerHTML = `<strong>${weatherData.list.main.temp};`
-          
+  
         }
-        
-
-
+  
       } catch (error) {
-        console.log(error);
+        console.log(`not working ${error}`);
       }
     };
-    apiFetch();
+    apiThree();
 
   } catch (error) {
     console.log(error);
   };
-const responseThree = await fetch(urlThree);
-  if (responseThree.ok) {
-    const data = await responseThree.json();
-    console.log(data); // this is for testing the call 
-    threeDayForecast(data);
-  } else {
-    throw Error(await responseThree.text());
-  } 
 }
-function threeDayForecast(weatherData) {
-            currentForeCast.innerHTML = `<strong>${weatherData.list.main.temp}`
-
-          };

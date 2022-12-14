@@ -32,12 +32,24 @@
     #map{
         max-width: 100%;
         grid-column: 1/-1;
-        
+
     }
 
     h2,
     h3 {
         padding: 1em;
+    }
+    #fresh {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #social {
+        grid-row: 2/3;
+    }
+    #datetime {
+        grid-row: 2/3;
     }
 
     .box {

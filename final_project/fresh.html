@@ -17,6 +17,7 @@
 </head>
 <body>
     <header>
+        
         <!-- 1. Readily available navigation and business contact information. -->
         <h1>Bountiful Fruits</h1>
         <span id="dateTime"></span>
@@ -55,13 +56,19 @@
                     </section>
                 </div>
             </fieldset>
-            <fieldset>
-                <legend>Business Discription</legend>
+            <fieldset id="special">
+                <legend>What can we do for you?</legend>
                 <label class="top">Special Requests <textarea type="textarea" name="bDiscription" value="" placeholder="I would like a ..." rows="15" id="bDiscription"></textarea> </label>
             </fieldset>
 
             <div id="shopping-cart">
                 Cart
+                <ul>
+                    <li>First Name: <span id="order-name"></span></li>
+                    <li>Email: <span id="order-email"></span></li>
+                    <li >Phone Number: <span id="order-phone"></span></li>
+                    <li>Special Request: <span id="order-request"></span></li>
+                </ul>
             </div>
 
             <input type="submit" value="Checkout"  class="submitBtn">
