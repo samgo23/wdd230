@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Boutinful Fruits Homepage</title>
 </head>
 <body>
+    <header>
+        <!-- 1. Readily available navigation and business contact information. -->
+        <h1>Bountiful Fruits</h1>
+        <span id="dateTime"></span>
+        <div id="social">
+            <!-- 4. Social media links (at least three) (no account necessary).-->
+            <img src="images/facebook.png" alt="Facebook"><a href="http://facebook.com"></a>
+            <img src="images/instagram.png" alt="Instagram"><a href="http://instagram.com"></a>
+            <img src="images/twitter.png" alt="twitter"><a href="http://twitter.com"></a>
+        </div>
+        <nav>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="about-us">
+        <h2>About Us!</h2>
+        <div class="about-us">
+            <picture>
+                <img data-src="images/beach-1280.jpg" alt="California City" src="images/placeholder-300x400.png" srcset="images/beach-700.jpg 700w, images/beach-400.jpg 400w" id="beach">
+            </picture>
+            
+            
+            <p class="p1"><strong>Bountiful Foods</strong> is small business specializing in organic, locally grown foods. We are physically located in Carlsbad, California, however, we have many food trucks that cover the coastal area from Los Angeles to San Diego. The company sells fruits and produce directly from the farmers in the area, but also uses some national and international suppliers. The owner-operated company caters to walk in traffic at our storefront in Carlsbad and, of course, our food trucks. We deliver and manage those orders on the phone and via the website. The mission is to provide fresh and healthy food options, including organic, made to order, fruit drinks and fruit bags, to the local population and to tourists visiting the coastal areas.</p>
+
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9442.456592065219!2d-117.38743664880592!3d33.20327928440737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc6fcab24c409f%3A0xa8b8dab8db9b636e!2sCalifornia+Welcome+Center%2C+Oceanside!5e0!3m2!1sen!2sus!4v1512607741934" width="600" height="300" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen="" data-gtm-yt-inspected-9="true"></iframe>
+            
+            
+            <div>
+                <h3>Contact information</h3>
+                <ul>
+                    <li>Email: contact@boutintifulfoods.com</li>
+                    <li>Phone: (555) 555-5555</li>
+                    <li>Address: </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p> &copy;<span id="year"> </span> | <a href="index.html">boutintifulfoods.com</a> | Sam Gordo | WDD 230 Final Project | <span id="modify"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
     
 </body>
 </html>

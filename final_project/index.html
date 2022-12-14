@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Noto+Sans&display=swap" rel="stylesheet">
-
-
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <title>Boutinful Fruits Homepage</title>
 </head>
 <body>
     <header>
+        <!-- 1. Readily available navigation and business contact information. -->
         <h1>Bountiful Fruits</h1>
         <span id="dateTime"></span>
         <div id="social">
+            <!-- 4. Social media links (at least three) (no account necessary).-->
             <img src="images/facebook.png" alt="Facebook"><a href="http://facebook.com"></a>
-            <img src="images/linkedin.png" alt="LinkedIn"><a href="http://linkedin.com"></a>
             <img src="images/instagram.png" alt="Instagram"><a href="http://instagram.com"></a>
             <img src="images/twitter.png" alt="twitter"><a href="http://twitter.com"></a>
         </div>
         <nav>
             <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-            <ul>
+            <ul id="primaryNav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="fresh.html">Fresh</a></li>
                 <li><a href="about-us.html">About Us</a></li>
@@ -33,14 +37,24 @@
     </header>
     <main>
         <div id="coast">
+            <!-- 2. Summary information about any coastal area or areas in the southern California coast of your choosing. -->
             <h2>Oceanside</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9442.456592065219!2d-117.38743664880592!3d33.20327928440737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc6fcab24c409f%3A0xa8b8dab8db9b636e!2sCalifornia+Welcome+Center%2C+Oceanside!5e0!3m2!1sen!2sus!4v1512607741934" width="600" height="300" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen="" data-gtm-yt-inspected-9="true"></iframe>
-            <p>“Welcome to Oceanside!” is what you will hear as you enter our beautiful visitor center. The California Welcome Center in Oceanside receives more than 60,000 visitors each year and has a fantastic group of volunteers that are friendly and eager to provide helpful information and tips to you and your group when exploring Oceanside and the greater San Diego County. The Welcome Center is a great resource to visitors and locals alike, providing helpful information on top things to do in Oceanside and around the state.  Additionally, the visitor center sells discount attraction tickets, local gifts, and souvenirs. </p>
+            <picture>
+                <img data-src="images/city-1280.jpg" alt="California City" src="images/placeholder-300x400.png" srcset="images/city-700.jpg 700w, images/city-400.jpg 400w">
+            </picture>
+            <p><strong>“Welcome to Oceanside!”</strong> is what you will hear as you enter our beautiful visitor center. The California Welcome Center in Oceanside receives more than 60,000 visitors each year and has a fantastic group of volunteers that are friendly and eager to provide helpful information and tips to you and your group when exploring Oceanside and the greater San Diego County. The Welcome Center is a great resource to visitors and locals alike, providing helpful information on top things to do in Oceanside and around the state.  Additionally, the visitor center sells discount attraction tickets, local gifts, and souvenirs. </p>
         </div>
         <div>
-            <p>Fruit drink mix</p>
+            <!-- 3. A call to action to make your own fruit drink mix. This link can link to the Fresh page. -->
+            <a href="fresh.html"> 
+            <h2>Start your fruit drink mix here!</h2>
+                <picture>
+                    <img data-src="images/pinapple-700.jpg" alt="California City" src="images/placeholder-300x400.png" srcset="images/pinapple-700.jpg 700w, images/pinapple-400.jpg 400w" id="pinapple">
+                </picture>
+            </a>
         </div>
-        <div id="weather" class="info">
+        <div id="weather" class="info box">
+            <!-- 5. The weather card(s) must summarize the current weather conditions for Carlsbad.-->
             <h2>Weather</h2>
             <figure>
                 <img src="" alt="" id="weather-icon" />
@@ -48,9 +62,15 @@
             </figure>
             <p>Current Temperature: <span id="current-temp"></span> &deg;F</p>
             <span></span>
-            <p>Wind Speed: <span id="wind-speed"></span> MPH</p>
+            <p>Condition: <span id="condition"></span></p>
+            <p>Humidity: <span id='humidity'> </span></p>
+            <p>Three Day Forcast: <span id="3-day-forcast"></span></p>
 
-            <p>Wind Chill: <span id='windChill'> </span></p>
+        </div>
+        <div class="box" id="drinks">
+            <!-- 6. Include an information card about the total number of specialty drinks that the current user has submitted from the Fresh page form. This information should just be stored locally, with the user's agent (browser). -->
+            <h2>Drink Cart</h2>
+            <p>Drinks: <span id="drink-history"></span></p> 
         </div>
     </main>
     <footer>

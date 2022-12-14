@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Boutinful Fruits Homepage</title>
 </head>
 <body>
-    
+    <header>
+        <!-- 1. Readily available navigation and business contact information. -->
+        <h1>Bountiful Fruits</h1>
+        <span id="dateTime"></span>
+        <div id="social">
+            <!-- 4. Social media links (at least three) (no account necessary).-->
+            <img src="images/facebook.png" alt="Facebook"><a href="http://facebook.com"></a>
+            <img src="images/instagram.png" alt="Instagram"><a href="http://instagram.com"></a>
+            <img src="images/twitter.png" alt="twitter"><a href="http://twitter.com"></a>
+        </div>
+        <nav>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="fresh">
+        <!-- The Fresh page contains a form that allows the user to build a specialty drink.-->
+        <form action="fresh.html" method="post">
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label class="top">First Name* <input type="text" name="fname" id="fname" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" id="lname" required></label>
+                <label class="top">Email* <input type="text" name="email" id="email" required></label>
+                <label class="top">Phone* <input type="tel" name="phone" id="phone" required></label>
+            </fieldset>
+            
+            <fieldset id="fruit-options">
+                <legend>Fruit Options</legend>
+                <label>Select Fruit (up to 3)</label>
+                <div >
+                    <section class="cards" id="check-box-group">
+                        
+                    </section>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Business Discription</legend>
+                <label class="top">Special Requests <textarea type="textarea" name="bDiscription" value="" placeholder="I would like a ..." rows="15" id="bDiscription"></textarea> </label>
+            </fieldset>
+
+            <div id="shopping-cart">
+                Cart
+            </div>
+
+            <input type="submit" value="Checkout"  class="submitBtn">
+
+
+
+        </form>
+        
+    </main>
+    <footer>
+        <div>
+            <p> &copy;<span id="year"> </span> | <a href="index.html">boutintifulfoods.com</a> | Sam Gordo | WDD 230 Final Project | <span id="modify"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
