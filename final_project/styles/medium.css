@@ -12,12 +12,12 @@
     nav ul#primaryNav {
         display: flex;
         margin: 0 2vw;
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
+        border-left: 2px solid rgba(0, 0, 0, 0.3);
     }
 
     nav ul li a {
         border: none;
-        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 2px solid rgba(0, 0, 0, 0.2);
     }
 
     main {
@@ -80,10 +80,6 @@
     }
     main.about-us {
         display: block;
-    }
-    div.about-us {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
     }
     #beach{
         grid-column: 1/3;
